@@ -14,6 +14,7 @@ namespace ConsoleApplication1
             Console.WriteLine("Hi I'm Max");
             Console.WriteLine("Nuevo Cambio");
             Console.WriteLine("prueba");
+            Console.WriteLine("-----------------");
             Console.Read();
         }
     }
