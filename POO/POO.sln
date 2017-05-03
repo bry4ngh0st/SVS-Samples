@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{66676F4F-036E-4D7A-B2EC-2F431CF37EE0}"
 EndProject
@@ -10,6 +10,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Herencia", "Herencia", "{B266376A-9B3F-478B-9E8E-7A8838CA22EF}"
 	ProjectSection(SolutionItems) = preProject
 		Saludos.txt = Saludos.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PRUEBA", "PRUEBA", "{97C63684-4E88-4634-AD04-A9751D68E9FF}"
+	ProjectSection(SolutionItems) = preProject
+		PRUEBA1.txt = PRUEBA1.txt
 	EndProjectSection
 EndProject
 Global
