@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Audit.cs" />
+    <Compile Include="Clases\Divicion.cs" />
     <Compile Include="Clases\Matematica.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\PersonaNatural.cs" />

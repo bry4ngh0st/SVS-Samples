@@ -29,10 +29,12 @@ namespace Max
             Clases.Matematica multiplicar = new Clases.Matematica();
             Clases.Matematica suma = new Clases.Sumar();
             Clases.Matematica restar = new Clases.Restar();
+            Clases.Matematica divicion = new Clases.Divicion();
 
             int salida1 = multiplicar.Calcular(5, 4);
             int salida2 = suma.Calcular(5, 4);
             int salida3 = restar.Calcular(5, 4);
+            int salida4 = divicion.Calcular(10, 2);
 
 
             Console.WriteLine(salida1);
