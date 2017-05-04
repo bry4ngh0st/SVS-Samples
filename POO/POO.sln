@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{66676F4F-036E-4D7A-B2EC-2F431CF37EE0}"
 EndProject
@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PRUEBA", "PRUEBA", "{97C636
 		PRUEBA1.txt = PRUEBA1.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Builders", "01 - Builders", "{4BA91BF0-874A-4EA7-8096-AFCA8B519838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO.Builders", "POO.Builders\POO.Builders.csproj", "{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,8 +35,15 @@ Global
 		{DD16B460-6698-46F2-B2F4-C013364CBA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD16B460-6698-46F2-B2F4-C013364CBA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD16B460-6698-46F2-B2F4-C013364CBA25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA} = {4BA91BF0-874A-4EA7-8096-AFCA8B519838}
 	EndGlobalSection
 EndGlobal
