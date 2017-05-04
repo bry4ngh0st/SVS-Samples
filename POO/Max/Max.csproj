@@ -51,6 +51,7 @@
     <Compile Include="Clases\PersonaNatural.cs" />
     <Compile Include="Clases\Restar.cs" />
     <Compile Include="Clases\Sumar.cs" />
+    <Compile Include="Interfaces\IEspecialidad.cs" />
     <Compile Include="Interfaces\IOperaciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
