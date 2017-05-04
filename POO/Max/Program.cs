@@ -40,6 +40,7 @@ namespace Max
             Console.WriteLine(salida1);
             Console.WriteLine(salida2);
             Console.WriteLine(salida3);
+            Console.WriteLine(salida4);
 
             Console.ReadLine();
         }
