@@ -7,6 +7,8 @@ namespace POO.Abstract
         public override void MetodoAbstracto()
         {
             Console.WriteLine("Implementando un metodo abstracto heredado");
+
+            throw new NotImplementedException();
         }
     }
 }
