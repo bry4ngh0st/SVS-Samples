@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Builders", "01 - Build
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO.Builders", "POO.Builders\POO.Builders.csproj", "{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{E95D7015-AB79-47F2-A96D-45F135E1A085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO.Tests", "POO.Tests\POO.Tests.csproj", "{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,11 +43,16 @@ Global
 		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA} = {4BA91BF0-874A-4EA7-8096-AFCA8B519838}
+		{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED} = {E95D7015-AB79-47F2-A96D-45F135E1A085}
 	EndGlobalSection
 EndGlobal
