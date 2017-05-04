@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO.Tests", "POO.Tests\POO.Tests.csproj", "{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Interfaces, Clases Abstractas", "02 - Interfaces, Clases Abstractas", "{A063C01E-28B3-447E-B691-503078DD3737}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO.Interfaces", "POO.Interfaces\POO.Interfaces.csproj", "{6596921C-5935-458E-8C65-37B67A988D42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,10 @@ Global
 		{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6596921C-5935-458E-8C65-37B67A988D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6596921C-5935-458E-8C65-37B67A988D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6596921C-5935-458E-8C65-37B67A988D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6596921C-5935-458E-8C65-37B67A988D42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +62,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6C7C7250-FBC6-48CA-96C2-44F98CA05CFA} = {4BA91BF0-874A-4EA7-8096-AFCA8B519838}
 		{EBDCEE75-BBAC-4E8D-9099-901B8B1A23ED} = {E95D7015-AB79-47F2-A96D-45F135E1A085}
+		{6596921C-5935-458E-8C65-37B67A988D42} = {A063C01E-28B3-447E-B691-503078DD3737}
 	EndGlobalSection
 EndGlobal
