@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Max.Interfaces
 {
-    public interface IEspecialidad:IOtrasEspecialidades
+    public interface IOtrasEspecialidades
     {
-        string Curso(string name);
+        string Docente(string nombre);
     }
 }

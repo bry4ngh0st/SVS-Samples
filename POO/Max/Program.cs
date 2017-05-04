@@ -45,9 +45,11 @@ namespace Max
 
             Interfaces.IOperaciones operacion = new Clases.Matematica();
             Interfaces.IEspecialidad curso = new Clases.Matematica();
+            Interfaces.IEspecialidad docente = new Clases.Matematica();
 
             Console.WriteLine("La raíz de 9 es=" + operacion.Raiz(9));
             Console.WriteLine("El curso es= " + curso.Curso("Programación Orientada a Objetos"));
+            Console.WriteLine("El nombre del Docente es= " + docente.Docente("Kevin"));
  
             Console.WriteLine(salida1);
             Console.WriteLine(salida2);

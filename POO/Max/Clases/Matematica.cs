@@ -23,5 +23,8 @@ namespace Max.Clases
         public string Curso(string name) {
             return name;
         }
+        public string Docente(string nombre) {
+            return nombre;
+        }
     }
 }
