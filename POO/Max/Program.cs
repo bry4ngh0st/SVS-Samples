@@ -48,6 +48,7 @@ namespace Max
             Console.WriteLine(salida2);
             Console.WriteLine(salida3);
             Console.WriteLine(salida4);
+            Console.WriteLine("\n Potencia de 5="+Clases.Matematica.Potencia(5));
 
             Console.ReadLine();
         }

@@ -12,5 +12,9 @@ namespace Max.Clases
         {
             return x * y;
         }
+        public static int Potencia(int x)
+        {
+            return x * x;
+        }
     }
 }
