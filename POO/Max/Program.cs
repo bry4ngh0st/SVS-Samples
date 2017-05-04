@@ -19,14 +19,14 @@ namespace Max
             persona1.Dni = "123456789";
             persona1.Correo = "zZ30.MaxZz@gmail.com";
             persona1.CodigoPostal = 051003;
-        
 
-            Console.WriteLine("Nombre: \n"+persona1.Nombre);
-            Console.WriteLine("Apellido:\n"+persona1.Apellido);
-            Console.WriteLine("Fecha de Modificación: \n"+persona1.FechaModificacion);
-            Console.WriteLine("Correo Electrónico: \n"+persona1.Correo);
-            Console.WriteLine("Código Postal: \n"+persona1.CodigoPostal);
-            Console.WriteLine("Dni: \n"+persona1.Dni);
+
+            Console.WriteLine("Nombre: \n" + persona1.Nombre);
+            Console.WriteLine("Apellido:\n" + persona1.Apellido);
+            Console.WriteLine("Fecha de Modificación: \n" + persona1.FechaModificacion);
+            Console.WriteLine("Correo Electrónico: \n" + persona1.Correo);
+            Console.WriteLine("Código Postal: \n" + persona1.CodigoPostal);
+            Console.WriteLine("Dni: \n" + persona1.Dni);
 
             persona1.Caminar();
             Console.WriteLine();
@@ -46,6 +46,15 @@ namespace Max
             Interfaces.IOperaciones operacion = new Clases.Matematica();
             Interfaces.IEspecialidad curso = new Clases.Matematica();
             Interfaces.IEspecialidad docente = new Clases.Matematica();
+
+            Interfaces.IDetalle detalle = new Clases.Modelo.Venta();
+
+            Clases.Producto producto = new Clases.Producto();
+            producto.Nombre = "CocaCola";
+            producto.Precio = 8;
+            producto.Cantiad = 5;
+
+            Console.WriteLine("El producto fue guardado? ="+ detalle.Guardar(producto));
 
             Console.WriteLine("La raíz de 9 es=" + operacion.Raiz(9));
             Console.WriteLine("El curso es= " + curso.Curso("Programación Orientada a Objetos"));

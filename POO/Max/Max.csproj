@@ -47,10 +47,14 @@
     <Compile Include="Clases\Audit.cs" />
     <Compile Include="Clases\Divicion.cs" />
     <Compile Include="Clases\Matematica.cs" />
+    <Compile Include="Clases\Modelo\Venta.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\PersonaNatural.cs" />
+    <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Restar.cs" />
     <Compile Include="Clases\Sumar.cs" />
+    <Compile Include="Interfaces\IDatos.cs" />
+    <Compile Include="Interfaces\IDetalle.cs" />
     <Compile Include="Interfaces\IEspecialidad.cs" />
     <Compile Include="Interfaces\IOperaciones.cs" />
     <Compile Include="Interfaces\IOtrasEspecialidades.cs" />
