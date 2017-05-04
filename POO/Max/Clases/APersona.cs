@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Max.Clases
 {
-    class Audit:APersona
+    public abstract class  APersona
     {
-        public DateTime FechaModificacion { get; set; }
+        public string Dni;
+        public string Correo;
+        public int CodigoPostal;
     }
 }

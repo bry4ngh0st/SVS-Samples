@@ -16,10 +16,17 @@ namespace Max
             persona1.Nombre = "Max";
             persona1.Apellido = "Aguilar";
             persona1.FechaModificacion = DateTime.Now;
+            persona1.Dni = "123456789";
+            persona1.Correo = "zZ30.MaxZz@gmail.com";
+            persona1.CodigoPostal = 051003;
+        
 
-            Console.WriteLine(persona1.Nombre);
-            Console.WriteLine(persona1.Apellido);
-            Console.WriteLine(persona1.FechaModificacion);
+            Console.WriteLine("Nombre: \n"+persona1.Nombre);
+            Console.WriteLine("Apellido:\n"+persona1.Apellido);
+            Console.WriteLine("Fecha de Modificación: \n"+persona1.FechaModificacion);
+            Console.WriteLine("Correo Electrónico: \n"+persona1.Correo);
+            Console.WriteLine("Código Postal: \n"+persona1.CodigoPostal);
+            Console.WriteLine("Dni: \n"+persona1.Dni);
 
             persona1.Caminar();
             Console.WriteLine();

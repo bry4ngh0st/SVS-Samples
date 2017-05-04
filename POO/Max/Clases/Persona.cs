@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Max.Clases
 {
-    class Persona:Audit
+    class Persona : Audit
     {
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -26,5 +26,6 @@ namespace Max.Clases
             Console.Write(" Caminar");
             Saltar();
         }
+
     }
 }
