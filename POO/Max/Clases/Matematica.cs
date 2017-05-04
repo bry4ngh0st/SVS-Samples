@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Max.Clases
 {
-    class Matematica
+    public class Matematica : Interfaces.IOperaciones
     {
         public virtual int Calcular(int x, int y)
         {
@@ -15,6 +15,10 @@ namespace Max.Clases
         public static int Potencia(int x)
         {
             return x * x;
+        }
+        public double Raiz(int x)
+        {
+            return Math.Sqrt(x);
         }
     }
 }

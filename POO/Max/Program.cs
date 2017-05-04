@@ -43,7 +43,10 @@ namespace Max
             int salida3 = restar.Calcular(5, 4);
             int salida4 = divicion.Calcular(10, 2);
 
+            Interfaces.IOperaciones operacion = new Clases.Matematica();
 
+            Console.WriteLine("La raíz de 9 es=" + operacion.Raiz(9));
+ 
             Console.WriteLine(salida1);
             Console.WriteLine(salida2);
             Console.WriteLine(salida3);
