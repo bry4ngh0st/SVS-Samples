@@ -76,7 +76,19 @@ namespace Max
             amd3.procesar();
 
             //FIN
-            Console.WriteLine("");
+
+
+            ClaseDAtaMapper.Mapper mapeo = new ClaseDAtaMapper.Mapper();
+            ClaseDAtaMapper.UsuarioDTO usrD = new ClaseDAtaMapper.UsuarioDTO();
+            ClaseDAtaMapper.UsuarioNegocio usrN =new ClaseDAtaMapper.UsuarioNegocio();
+
+            usrD.id = 10;
+            usrD.nombre = "Max";
+            usrD.direccion = "Street";
+            usrD.correo = "example@mail.com";
+
+            usrN = mapeo.Mapear(usrD);
+            Console.WriteLine("El nombre asignado: " + usrN.nombre);
 
             Console.Read();
         }

@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClaseNullReference\AdminEquipo.cs" />
-    <Compile Include="ClaseNullReference\Equipo.cs" />
+    <Compile Include="ClaseDAtaMapper\Mapper.cs" />
+    <Compile Include="ClaseDAtaMapper\UsuarioDTO.cs" />
+    <Compile Include="ClaseDAtaMapper\UsuarioNegocio.cs" />
+    <Compile Include="ClaseDAtaMapper\ClaseNullReference\AdminEquipo.cs" />
+    <Compile Include="ClaseDAtaMapper\ClaseNullReference\Equipo.cs" />
     <Compile Include="Clases\APersona.cs" />
     <Compile Include="Clases\Audit.cs" />
     <Compile Include="Clases\Divicion.cs" />
