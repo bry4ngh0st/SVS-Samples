@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Max.Interfaces
 {
-    public interface IEspecialidad:IOtrasEspecialidades
+    public interface IEspecialidad : IOtrasEspecialidades
     {
         string Curso(string name);
     }

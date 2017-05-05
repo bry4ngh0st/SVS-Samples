@@ -50,7 +50,7 @@ namespace Max
             Interfaces.IDetalle detalle = new Clases.Modelo.Venta();
 
             Clases.Producto producto = new Clases.Producto();
-            producto.Nombre = "CocaCola";
+            producto.Nombre = "giughdigh";
             producto.Precio = 8;
             producto.Cantiad = 5;
 
@@ -66,7 +66,26 @@ namespace Max
             Console.WriteLine(salida4);
             Console.WriteLine("\n Potencia de 5="+Clases.Matematica.Potencia(5));
 
-            Console.ReadLine();
+            /*Clase Null Reference*/
+            ClaseNullReference.Equipo equipo = new ClaseNullReference.Equipo();
+            ClaseNullReference.Equipo equipo2 = new ClaseNullReference.Equipo();
+            ClaseNullReference.Equipo equipo3 = new ClaseNullReference.Equipo();
+
+            equipo.id = 0;
+            equipo2.id = 1;
+            equipo3.id = 2;
+
+            equipo.admin.procesar();
+            Console.WriteLine(equipo.id);
+            equipo2.admin.procesar();
+            Console.WriteLine(equipo2.id);
+            equipo3.admin.procesar();
+            Console.WriteLine(equipo3.id);
+
+            //FIN
+            Console.WriteLine("");
+
+            Console.Read();
         }
     }
 }
