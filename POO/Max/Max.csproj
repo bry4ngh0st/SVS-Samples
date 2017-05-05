@@ -65,6 +65,8 @@
     <Compile Include="Interfaces\IOtrasEspecialidades.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SOLID\ControlErrores.cs" />
+    <Compile Include="SOLID\ProcesarDatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -81,14 +81,19 @@ namespace Max
             ClaseDAtaMapper.Mapper mapeo = new ClaseDAtaMapper.Mapper();
             ClaseDAtaMapper.UsuarioDTO usrD = new ClaseDAtaMapper.UsuarioDTO();
             ClaseDAtaMapper.UsuarioNegocio usrN =new ClaseDAtaMapper.UsuarioNegocio();
-
+            //Hardcode, setear manualmente
             usrD.id = 10;
             usrD.nombre = "Max";
             usrD.direccion = "Street";
             usrD.correo = "example@mail.com";
 
             usrN = mapeo.Mapear(usrD);
+
             Console.WriteLine("El nombre asignado: " + usrN.nombre);
+
+            //Principios de programación SOLID
+            SOLID.ProcesarDatos procesar = new SOLID.ProcesarDatos();
+            procesar.Procesar();
 
             Console.Read();
         }
