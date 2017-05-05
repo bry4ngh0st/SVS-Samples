@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace Max.ClaseNullReference
 {
-    class Equipo
+    public class Equipo
     {
-        public Equipo()
+        private static AdminEquipo admin { get; set; }
+        
+        public static AdminEquipo GetAdmin()
         {
             if (admin == null)
             {
                 admin = new AdminEquipo();
             }
+            return admin;
         }
-        public int id { get; set; }
-        public AdminEquipo admin { get; set; }
+        
     }
 }

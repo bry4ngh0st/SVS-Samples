@@ -67,20 +67,13 @@ namespace Max
             Console.WriteLine("\n Potencia de 5="+Clases.Matematica.Potencia(5));
 
             /*Clase Null Reference*/
-            ClaseNullReference.Equipo equipo = new ClaseNullReference.Equipo();
-            ClaseNullReference.Equipo equipo2 = new ClaseNullReference.Equipo();
-            ClaseNullReference.Equipo equipo3 = new ClaseNullReference.Equipo();
-
-            equipo.id = 0;
-            equipo2.id = 1;
-            equipo3.id = 2;
-
-            equipo.admin.procesar();
-            Console.WriteLine(equipo.id);
-            equipo2.admin.procesar();
-            Console.WriteLine(equipo2.id);
-            equipo3.admin.procesar();
-            Console.WriteLine(equipo3.id);
+            ClaseNullReference.AdminEquipo adm = ClaseNullReference.Equipo.GetAdmin();
+            ClaseNullReference.AdminEquipo adm2 = ClaseNullReference.Equipo.GetAdmin();
+            ClaseNullReference.AdminEquipo amd3 = ClaseNullReference.Equipo.GetAdmin();
+            
+            adm.procesar();
+            adm2.procesar();
+            amd3.procesar();
 
             //FIN
             Console.WriteLine("");

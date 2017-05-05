@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Max.ClaseNullReference
 {
-    class AdminEquipo
+    public class AdminEquipo
     {
         public void procesar()
         {
