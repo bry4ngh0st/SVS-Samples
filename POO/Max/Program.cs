@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Max.SOLID;
 
 namespace Max
 {
@@ -54,23 +55,23 @@ namespace Max
             producto.Precio = 8;
             producto.Cantiad = 5;
 
-            Console.WriteLine("El producto fue guardado? ="+ detalle.Guardar(producto));
+            Console.WriteLine("El producto fue guardado? =" + detalle.Guardar(producto));
 
             Console.WriteLine("La raíz de 9 es=" + operacion.Raiz(9));
             Console.WriteLine("El curso es= " + curso.Curso("Programación Orientada a Objetos"));
             Console.WriteLine("El nombre del Docente es= " + docente.Docente("Kevin"));
- 
+
             Console.WriteLine(salida1);
             Console.WriteLine(salida2);
             Console.WriteLine(salida3);
             Console.WriteLine(salida4);
-            Console.WriteLine("\n Potencia de 5="+Clases.Matematica.Potencia(5));
+            Console.WriteLine("\n Potencia de 5=" + Clases.Matematica.Potencia(5));
 
             /*Clase Null Reference*/
             ClaseNullReference.AdminEquipo adm = ClaseNullReference.Equipo.GetAdmin();
             ClaseNullReference.AdminEquipo adm2 = ClaseNullReference.Equipo.GetAdmin();
             ClaseNullReference.AdminEquipo amd3 = ClaseNullReference.Equipo.GetAdmin();
-            
+
             adm.procesar();
             adm2.procesar();
             amd3.procesar();
@@ -80,7 +81,7 @@ namespace Max
 
             ClaseDAtaMapper.Mapper mapeo = new ClaseDAtaMapper.Mapper();
             ClaseDAtaMapper.UsuarioDTO usrD = new ClaseDAtaMapper.UsuarioDTO();
-            ClaseDAtaMapper.UsuarioNegocio usrN =new ClaseDAtaMapper.UsuarioNegocio();
+            ClaseDAtaMapper.UsuarioNegocio usrN = new ClaseDAtaMapper.UsuarioNegocio();
             //Hardcode, setear manualmente
             usrD.id = 10;
             usrD.nombre = "Max";
@@ -95,6 +96,24 @@ namespace Max
             SOLID.ProcesarDatos procesar = new SOLID.ProcesarDatos();
             procesar.Procesar();
 
+
+            SOLID.Nivel.Practicante practicante = new SOLID.Nivel.Practicante();
+            SOLID.Nivel.Junior junior = new SOLID.Nivel.Junior();
+            SOLID.Nivel.Senior senior = new SOLID.Nivel.Senior();
+
+            try
+            {
+                Console.WriteLine("El nivel Practicante gana: " + practicante.ObtenerSalario());
+                Console.WriteLine("El nivel Junior gana: " + junior.ObtenerSalario());
+                Console.WriteLine("El nivel Senior gana: " + senior.ObtenerSalario());
+            }
+            catch (Exception ex)
+            {
+                ControlErrores.Imprimir(ex.Message);
+            }
+            
+
+            
             Console.Read();
         }
     }

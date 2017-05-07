@@ -11,7 +11,17 @@ namespace Max.SOLID
     {
         public static void Imprimir(string error)
         {
-            System.IO.File.WriteAllText(@"C:\Users\max\Desktop\Error.txt", error);
+            if (File.Exists(@"C:\Users\max\Desktop\Error.txt"))
+            {
+                StreamWriter writer = File.AppendText(@"C:\Users\max\Desktop\Error.txt");
+                writer.WriteLine(error);
+                writer.Close();
+            }
+            else
+            {
+                System.IO.File.WriteAllText(@"C:\Users\max\Desktop\Error.txt", error);
+            }
+            
         }
     }
 }

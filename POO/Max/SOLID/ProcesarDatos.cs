@@ -16,7 +16,7 @@ namespace Max.SOLID
             {
                 Console.WriteLine("\n Preocesando el error ");
 
-                throw new Exception("Creando un error forzado");
+                throw new Exception("\nCreando un error forzado\n");
                 
             }
             catch (Exception e)
