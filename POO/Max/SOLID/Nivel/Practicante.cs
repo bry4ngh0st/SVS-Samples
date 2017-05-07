@@ -8,7 +8,7 @@ namespace Max.SOLID.Nivel
 {
     public class Practicante : Desarrollador
     {
-        protected int salario { get; set; }
+        private int salario { get; set; }
         public Practicante()
         {
             salario = 0;

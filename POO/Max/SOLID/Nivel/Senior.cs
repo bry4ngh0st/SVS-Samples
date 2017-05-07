@@ -8,7 +8,7 @@ namespace Max.SOLID.Nivel
 {
     public class Senior : Desarrollador
     {
-        protected int salario { get; set; }
+        private int salario { get; set; }
         public Senior()
         {
             salario = 5000;

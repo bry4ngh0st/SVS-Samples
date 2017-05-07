@@ -96,7 +96,7 @@ namespace Max
             Console.WriteLine("El nombre asignado: " + usrN.nombre);
 
             //Principios de programación SOLID
-            ProcesarDatos procesar = new ProcesarDatos();
+            ProcesarDatos procesar = new SOLID.ProcesarDatos();
             procesar.Procesar();
 
 
