@@ -10,6 +10,10 @@ namespace YORDY
     {
         static void Main(string[] args)
         {
+            Solid.Factura factura = new Solid.Factura();
+           
+            factura.CalcularTotal();
+            Console.ReadLine();
         }
     }
 }
