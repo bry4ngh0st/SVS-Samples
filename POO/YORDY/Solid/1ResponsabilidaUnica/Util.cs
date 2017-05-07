@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YORDY
+namespace YORDY.Solid
 {
-    class IVA
+   public  class Util
     {
+        public int EnviarCorreos() {
+            return 0;
+        }
     }
 }

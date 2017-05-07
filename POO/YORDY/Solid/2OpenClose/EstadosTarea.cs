@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YORDY
+namespace YORDY.Solid._2OpenClose
 {
-    class Deduccion
+    class EstadosTarea
     {
     }
 }
