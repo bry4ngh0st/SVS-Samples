@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Max.SOLID;
+using Max.SOLID.Nivel;
+using Max.Clases;
+using Max.Interfaces;
 
 namespace Max
 {
@@ -34,23 +37,23 @@ namespace Max
             persona2.Natural();
             Console.WriteLine();
 
-            Clases.Matematica multiplicar = new Clases.Matematica();
-            Clases.Matematica suma = new Clases.Sumar();
-            Clases.Matematica restar = new Clases.Restar();
-            Clases.Matematica divicion = new Clases.Divicion();
+            Matematica multiplicar = new Matematica();
+            Matematica suma = new Sumar();
+            Matematica restar = new Restar();
+            Matematica divicion = new Divicion();
 
             int salida1 = multiplicar.Calcular(5, 4);
             int salida2 = suma.Calcular(5, 4);
             int salida3 = restar.Calcular(5, 4);
             int salida4 = divicion.Calcular(10, 2);
 
-            Interfaces.IOperaciones operacion = new Clases.Matematica();
-            Interfaces.IEspecialidad curso = new Clases.Matematica();
-            Interfaces.IEspecialidad docente = new Clases.Matematica();
+            IOperaciones operacion = new Matematica();
+            IEspecialidad curso = new Matematica();
+            IEspecialidad docente = new Matematica();
 
-            Interfaces.IDetalle detalle = new Clases.Modelo.Venta();
+            IDetalle detalle = new Clases.Modelo.Venta();
 
-            Clases.Producto producto = new Clases.Producto();
+            Producto producto = new Producto();
             producto.Nombre = "giughdigh";
             producto.Precio = 8;
             producto.Cantiad = 5;
@@ -65,7 +68,7 @@ namespace Max
             Console.WriteLine(salida2);
             Console.WriteLine(salida3);
             Console.WriteLine(salida4);
-            Console.WriteLine("\n Potencia de 5=" + Clases.Matematica.Potencia(5));
+            Console.WriteLine("\n Potencia de 5=" + Matematica.Potencia(5));
 
             /*Clase Null Reference*/
             ClaseNullReference.AdminEquipo adm = ClaseNullReference.Equipo.GetAdmin();
@@ -93,13 +96,13 @@ namespace Max
             Console.WriteLine("El nombre asignado: " + usrN.nombre);
 
             //Principios de programación SOLID
-            SOLID.ProcesarDatos procesar = new SOLID.ProcesarDatos();
+            ProcesarDatos procesar = new ProcesarDatos();
             procesar.Procesar();
 
 
-            SOLID.Nivel.Practicante practicante = new SOLID.Nivel.Practicante();
-            SOLID.Nivel.Junior junior = new SOLID.Nivel.Junior();
-            SOLID.Nivel.Senior senior = new SOLID.Nivel.Senior();
+            Practicante practicante = new Practicante();
+            Junior junior = new Junior();
+            Senior senior = new Senior();
 
             try
             {
