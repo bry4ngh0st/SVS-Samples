@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace YORDY.Solid._2OpenClose
 {
-    class EstadosTarea
+    public class EstadosTarea
     {
+        public string Pendiente { get; set; }
+        public string Pospuesta { get; set; }
+        public string Cancelado { get; set; }
+        
     }
 }

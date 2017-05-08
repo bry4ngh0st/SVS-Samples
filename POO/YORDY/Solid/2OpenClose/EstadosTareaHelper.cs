@@ -8,14 +8,40 @@ namespace YORDY.Solid._2OpenClose
 {
     class EstadosTareaHelper
     {
-        public virtual void Finalizar(EstadosTareaHelper estado )
+        Tarea tare = new Tarea();
+        EstadosTarea estado = new EstadosTarea();
+        public virtual void Finalizar(EstadosTarea estado )
         {
             switch(estado)
             {
-                case EstadoTarea.Pendiente:
+                case estado.Pendiente:
                     break;
+
+                case estado.Pospuesta:
+                    throw new ApplicationException("imposible de fianlizar");
+                default:
+                    throw new ArgumentOutOfRangeException();
+
 
             } 
         }
+      /*  public virtual void Cancelar(EstadosTarea estado)
+        {
+            switch (estado)
+            {
+
+            }
+
+         
+
+        }
+        public virtual void Posponer(EstadosTarea estado)
+        {
+            switch (estado)
+            {
+                //posponemos
+            }
+        }
+        */
     }
 }

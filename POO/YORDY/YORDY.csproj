@@ -43,12 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deduccion.cs" />
-    <Compile Include="IVA.cs" />
+    <Compile Include="Solid\1ResponsabilidaUnica\Deduccion.cs" />
+    <Compile Include="Solid\1ResponsabilidaUnica\IVA.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Solid\Factura.cs" />
-    <Compile Include="Solid\Util.cs" />
+    <Compile Include="Solid\1ResponsabilidaUnica\Factura.cs" />
+    <Compile Include="Solid\1ResponsabilidaUnica\Util.cs" />
+    <Compile Include="Solid\2OpenClose\EstadosTarea.cs" />
+    <Compile Include="Solid\2OpenClose\EstadosTareaHelper.cs" />
+    <Compile Include="Solid\2OpenClose\EstadoTareaBase.cs" />
+    <Compile Include="Solid\2OpenClose\EstadoTareaCancelar.cs" />
+    <Compile Include="Solid\2OpenClose\EstadoTareaPendiente.cs" />
+    <Compile Include="Solid\2OpenClose\EstadoTareaPospuesta.cs" />
+    <Compile Include="Solid\2OpenClose\Tarea.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
