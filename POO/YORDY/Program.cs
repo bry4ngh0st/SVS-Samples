@@ -13,7 +13,13 @@ namespace YORDY
             Solid.Factura factura = new Solid.Factura();
            
             factura.CalcularTotal();
+            
+            Solid._2OpenClose.Junior junior = new Solid._2OpenClose.Junior();
+
+            Console.WriteLine(junior.ObtenerSalario());
+
             Console.ReadLine();
+
         }
     }
 }
