@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Max2.Interfaz;
 
-namespace YORDY.Solid._2OpenClose
+namespace Max2
 {
-    class EstadosTarea
+    public class Desarrollador 
     {
+        public string Nombre { get; set; }
     }
 }

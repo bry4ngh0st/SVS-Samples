@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD16B460-6698-46F2-B2F4-C013364CBA25}</ProjectGuid>
+    <ProjectGuid>{E482AF09-4770-4783-B78E-D701C5CE4676}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Max</RootNamespace>
-    <AssemblyName>Max</AssemblyName>
+    <RootNamespace>Max2</RootNamespace>
+    <AssemblyName>Max2</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,35 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClaseDAtaMapper\Mapper.cs" />
-    <Compile Include="ClaseDAtaMapper\UsuarioDTO.cs" />
-    <Compile Include="ClaseDAtaMapper\UsuarioNegocio.cs" />
-    <Compile Include="ClaseDAtaMapper\ClaseNullReference\AdminEquipo.cs" />
-    <Compile Include="ClaseDAtaMapper\ClaseNullReference\Equipo.cs" />
-    <Compile Include="Clases\APersona.cs" />
-    <Compile Include="Clases\Audit.cs" />
-    <Compile Include="Clases\Divicion.cs" />
-    <Compile Include="Clases\Matematica.cs" />
-    <Compile Include="Clases\Modelo\Venta.cs" />
-    <Compile Include="Clases\Persona.cs" />
-    <Compile Include="Clases\PersonaNatural.cs" />
-    <Compile Include="Clases\Producto.cs" />
-    <Compile Include="Clases\Restar.cs" />
-    <Compile Include="Clases\Sumar.cs" />
-    <Compile Include="Interfaces\IDatos.cs" />
-    <Compile Include="Interfaces\IDetalle.cs" />
-    <Compile Include="Interfaces\IEspecialidad.cs" />
-    <Compile Include="Interfaces\IOperaciones.cs" />
-    <Compile Include="Interfaces\IOtrasEspecialidades.cs" />
+    <Compile Include="Clases\Junior.cs" />
+    <Compile Include="Clases\Practicante.cs" />
+    <Compile Include="Clases\Senior.cs" />
+    <Compile Include="ControlErrores.cs" />
+    <Compile Include="Desarrollador.cs" />
+    <Compile Include="Interfaz\ISalario.cs" />
+    <Compile Include="Interfaz\ISalario2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SOLID\ControlErrores.cs" />
-    <Compile Include="SOLID\Desarrollador.cs" />
-    <Compile Include="SOLID\Nivel\Junior.cs" />
-    <Compile Include="SOLID\Nivel\Practicante.cs" />
-    <Compile Include="SOLID\Nivel\Senior.cs" />
-    <Compile Include="SOLID\ProcesarDatos.cs" />
-    <Compile Include="SOLID\Validador.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

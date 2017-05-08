@@ -8,6 +8,7 @@ namespace Max.SOLID
 {
     public abstract class Desarrollador
     {
+        public string Nombre { get; set; }
         public abstract decimal ObtenerSalario();
 
     }

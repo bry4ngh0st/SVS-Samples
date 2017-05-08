@@ -104,11 +104,18 @@ namespace Max
             Junior junior = new Junior();
             Senior senior = new Senior();
 
+            practicante.Nombre = "Max";
+            junior.Nombre = "";
+            senior.Nombre = "Max";
+
             try
             {
                 Console.WriteLine("El nivel Practicante gana: " + practicante.ObtenerSalario());
                 Console.WriteLine("El nivel Junior gana: " + junior.ObtenerSalario());
                 Console.WriteLine("El nivel Senior gana: " + senior.ObtenerSalario());
+                Validador.Validar(practicante);
+                Validador.Validar(junior);
+                Validador.Validar(senior);
             }
             catch (Exception ex)
             {

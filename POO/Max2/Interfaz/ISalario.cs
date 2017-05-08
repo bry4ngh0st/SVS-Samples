@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YORDY.Solid._2OpenClose
+namespace Max2.Interfaz
 {
-    class EstadosTarea
+    public interface ISalario
     {
+        decimal ObtenerSalario();
     }
 }

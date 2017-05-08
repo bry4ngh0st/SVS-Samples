@@ -6,21 +6,7 @@ using System.Threading.Tasks;
 
 namespace YORDY.Solid._2OpenClose
 {
-    class EstadoTareaPospuesta : EstadoTareaBase
+    class EstadoTareaPospuesta
     {
-        public override void Cancelar()
-        {
-            //cancelemos 
-        }
-
-        public override void Fianlizar()
-        {
-            throw new ApplicationException("Imposible posponer Tarea ya fianlizad");
-        }
-
-        public override void Posponer()
-        {
-            throw new ApplicationException("Tarea ya Pospuesta");
-        }
     }
 }
