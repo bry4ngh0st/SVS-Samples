@@ -14,13 +14,14 @@ namespace TDD.UnitTests
         [Test]
         public void PruebaDeValidacion()
         {
-            var item = new Item();
-            item.Id = 01;
-            item.Nombre = string.Empty;
-            item.Precio = 12.6m;
-            Lugar lugar = new Lugar();
-            item.Lugar = lugar;
-
+            var item = new Item
+            {
+                Id = 01,
+                Nombre = string.Empty,
+                Precio = 162m,
+                Lugar = new Lugar()
+            };
+            
             var validar =  item.EsValido();
 
             Assert.IsTrue(validar);
