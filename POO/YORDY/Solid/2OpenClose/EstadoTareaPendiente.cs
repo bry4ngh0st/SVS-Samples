@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YORDY.Solid._2OpenClose
 {
-    class EstadoTareaPendiente
+    class EstadoTareaPendiente : EstadoTareaBase
     {
     }
 }

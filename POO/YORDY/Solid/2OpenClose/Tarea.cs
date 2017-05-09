@@ -16,7 +16,7 @@ namespace YORDY.Solid._2OpenClose
         }
         public void Finalizar()
         {
-            _estadoTarea.Fianlizar();
+            _estadoTarea.Finalizar();
 
         }
         public void Cancelar()

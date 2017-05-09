@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace YORDY.Solid._2OpenClose
 {
-    class EstadoTareaBase
+    public class EstadoTareaBase
     {
+        public void Finalizar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Cancelar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Posponer()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

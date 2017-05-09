@@ -51,7 +51,6 @@
     <Compile Include="Solid\1ResponsabilidaUnica\Util.cs" />
     <Compile Include="Solid\2OpenClose\Desarrollador.cs" />
     <Compile Include="Solid\2OpenClose\EstadosTarea.cs" />
-    <Compile Include="Solid\2OpenClose\EstadosTareaHelper.cs" />
     <Compile Include="Solid\2OpenClose\EstadoTareaBase.cs" />
     <Compile Include="Solid\2OpenClose\EstadoTareaCancelar.cs" />
     <Compile Include="Solid\2OpenClose\EstadoTareaPendiente.cs" />
