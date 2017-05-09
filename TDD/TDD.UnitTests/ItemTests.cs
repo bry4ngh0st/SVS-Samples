@@ -22,9 +22,7 @@ namespace TDD.UnitTests
                 Lugar = new Lugar()
             };
             
-            var validar =  item.EsValido();
-
-            Assert.IsTrue(validar);
+            Assert.Throws<Exception>(() => item.EsValido());
         }
     }  
 }
