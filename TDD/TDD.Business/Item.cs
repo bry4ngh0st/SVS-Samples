@@ -12,5 +12,14 @@ namespace TDD.Business
         public string Nombre { get; set; }
         public decimal Precio { get; set; }
         public Lugar Lugar { get; set; }
+
+        public bool EsValido()
+        {
+            if (Id == 0)
+                return false;
+            else
+                return true;
+            
+        }
     }
 }
