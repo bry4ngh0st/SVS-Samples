@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Max2", "Max2\Max2.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Max3", "Max3\Max3.csproj", "{398000E4-DB11-4F7A-9ED7-BDDFD5320004}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Max4", "Max4\Max4.csproj", "{CE1B020B-A09E-42FE-9A78-37C63C89B466}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{398000E4-DB11-4F7A-9ED7-BDDFD5320004}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{398000E4-DB11-4F7A-9ED7-BDDFD5320004}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{398000E4-DB11-4F7A-9ED7-BDDFD5320004}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE1B020B-A09E-42FE-9A78-37C63C89B466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE1B020B-A09E-42FE-9A78-37C63C89B466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE1B020B-A09E-42FE-9A78-37C63C89B466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE1B020B-A09E-42FE-9A78-37C63C89B466}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
