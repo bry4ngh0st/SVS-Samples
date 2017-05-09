@@ -24,6 +24,9 @@ namespace TDD.Business
             if (Precio == 0)
                 throw new Exception("Insetar precio");
 
+            if (Lugar == null)
+                throw new Exception("El lugar es invalido.");
+
             return true;
         }
     }
