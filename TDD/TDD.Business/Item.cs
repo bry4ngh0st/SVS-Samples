@@ -15,26 +15,13 @@ namespace TDD.Business
 
         public bool EsValido()
         {
-            if ((Id == 0))
-            {
-                return false;
-            }
-            else if (Nombre == null)
-            {
-                return false;
-            }
-            else if (Precio == 0)
-            {
-                return false;
-
-            }
-            else if (Lugar == null)
+            if (Id == 0 || Nombre == null || Precio == 0 || Lugar == null)
             {
                 return false;
             }
             else
                 return true;
-
+            
 
         }
     }
