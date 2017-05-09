@@ -13,19 +13,19 @@ namespace TDD.Business
         public decimal Precio { get; set; }
         public Lugar Lugar { get; set; }
 
-        public bool EsValido()
+        public bool Validar()
         {
-            if (Id == 0)
+            if (Id <= 0)
                 throw new Exception("Id invalido");
 
             if (string.IsNullOrEmpty(Nombre))
                 throw new Exception("Nombre invalido");
 
-            if (Precio == 0)
-                throw new Exception("Insetar precio");
+            if (Precio <= 0)
+                throw new Exception("Precio invalido");
 
             if (Lugar == null)
-                throw new Exception("El lugar es invalido.");
+                throw new Exception("Lugar invalido.");
 
             return true;
         }

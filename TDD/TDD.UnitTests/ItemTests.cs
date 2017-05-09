@@ -1,9 +1,5 @@
 ﻿using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TDD.Business;
 
 namespace TDD.UnitTests
@@ -11,44 +7,81 @@ namespace TDD.UnitTests
     [TestFixture]
     public class ItemTests
     {
-        [Test]
-        public void PruebaDeValidacion()
+        [TestCase(-1)]
+        [TestCase(0)]
+        public void ValidarItem_IdInvalido_ThrowException(int id)
         {
-            var item = new Item
+            var item = new Item()
             {
-                Id = 01,
-                Nombre = "ex",
-                Precio = 15m,
-                Lugar = new Lugar()
-            };
-            
-            Assert.Throws<Exception>(() => item.EsValido());
-        }
-        [Test]
-        public void PruebaValidacionMax()
-        {
-            var item = new Item
-            {
-                Id = 01,
-                Nombre = "",
-                Precio = 15m,
+                Id = id,
+                Nombre = "Name",
+                Precio = 100,
                 Lugar = new Lugar()
             };
 
-            Assert.Throws<Exception>(() => item.EsValido());
+            Assert.Throws<Exception>(() => item.Validar());
         }
-        [Test]
-        public void PruebaValidacionMax2()
+
+        [TestCase("")]
+        [TestCase(null)]
+        public void ValidarItem_NombreInvalido_ThrowException(string nombre)
         {
-            var item = new Item
+            var item = new Item()
             {
-                Id = 0,
-                Nombre = "Max",
-                Precio = 15m,
+                Id = 1,
+                Nombre = nombre,
+                Precio = 100,
                 Lugar = new Lugar()
             };
 
-            Assert.Throws<Exception>(() => item.EsValido());
+            Assert.Throws<Exception>(() => item.Validar());
         }
-    }  
+
+        [TestCase(-100)]
+        [TestCase(0)]
+        public void ValidarItem_PrecioInvalido_ThrowException(decimal precio)
+        {
+            var item = new Item()
+            {
+                Id = 1,
+                Nombre = "nombre",
+                Precio = precio,
+                Lugar = new Lugar()
+            };
+
+            Assert.Throws<Exception>(() => item.Validar());
+        }
+
+        [Test]
+        public void ValidarItem_LugarInvalido_ThrowException()
+        {
+            var item = new Item()
+            {
+                Id = 1,
+                Nombre = "nombre",
+                Precio = 100,
+                Lugar = null
+            };
+
+            Assert.Throws<Exception>(() => item.Validar());
+        }
+        
+        [Test]
+        public void ValidarItem_DatosCorrectos_ReturnTrue()
+        {
+            var item = new Item()
+            {
+                Id = 1,
+                Nombre = "nombre",
+                Precio = 100,
+                Lugar = new Lugar()
+                {
+                    Id = 1,
+                    Nombre = "Abancay"
+                }
+            };
+
+            Assert.IsTrue(item.Validar());
+        }
+    }
 }
