@@ -15,14 +15,10 @@ namespace TDD.Business
 
         public bool EsValido()
         {
-            if (Id == 0 || Precio == 0 || Lugar == null || string.IsNullOrEmpty(Nombre))
-            {
-                return false;
-            }
-            else
-                return true;
-            
+            if (Id == 0)
+                throw new Exception("Id invalido");
 
+            return true;
         }
     }
 }
