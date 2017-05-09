@@ -17,6 +17,22 @@ namespace TDD.Business
         {
             if (Id == 0)
                 throw new Exception("Id invalido");
+                
+            if (Id == 0 || Precio == 0 || Lugar == null )
+            {
+                return false;
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(Nombre))
+                {
+                    throw new Exception("El nombre es nulo o vacío");
+                }
+                else
+                {
+                    return true;
+                }
+            }            
 
             return true;
         }
