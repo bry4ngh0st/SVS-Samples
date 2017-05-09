@@ -15,7 +15,7 @@ namespace TDD.Business
 
         public bool EsValido()
         {
-            if (Id == 0 || Nombre == null || Precio == 0 || Lugar == null)
+            if (Id == 0 || Precio == 0 || Lugar == null || string.IsNullOrEmpty(Nombre))
             {
                 return false;
             }

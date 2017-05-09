@@ -17,8 +17,8 @@ namespace TDD.UnitTests
             var item = new Item
             {
                 Id = 01,
-                Nombre = string.Empty,
-                Precio = 162m,
+                Nombre = "",
+                Precio = 15m,
                 Lugar = new Lugar()
             };
             
