@@ -17,11 +17,37 @@ namespace TDD.UnitTests
             var item = new Item
             {
                 Id = 01,
-                Nombre = "",
+                Nombre = "ex",
                 Precio = 15m,
                 Lugar = new Lugar()
             };
             
+            Assert.Throws<Exception>(() => item.EsValido());
+        }
+        [Test]
+        public void PruebaValidacionMax()
+        {
+            var item = new Item
+            {
+                Id = 01,
+                Nombre = "",
+                Precio = 15m,
+                Lugar = new Lugar()
+            };
+
+            Assert.Throws<Exception>(() => item.EsValido());
+        }
+        [Test]
+        public void PruebaValidacionMax2()
+        {
+            var item = new Item
+            {
+                Id = 0,
+                Nombre = "Max",
+                Precio = 15m,
+                Lugar = new Lugar()
+            };
+
             Assert.Throws<Exception>(() => item.EsValido());
         }
     }  

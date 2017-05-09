@@ -19,7 +19,7 @@ namespace TDD.Business
                 throw new Exception("Id invalido");
 
             if (string.IsNullOrEmpty(Nombre))
-                throw new Exception("El nombre es nulo o vacío");
+                throw new Exception("Nombre invalido");
 
             if (Precio == 0)
                 throw new Exception("Insetar precio");
