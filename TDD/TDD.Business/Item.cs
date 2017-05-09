@@ -21,6 +21,9 @@ namespace TDD.Business
             if (string.IsNullOrEmpty(Nombre))
                 throw new Exception("El nombre es nulo o vacío");
 
+            if (Precio == 0)
+                throw new Exception("Insetar precio");
+
             return true;
         }
     }
