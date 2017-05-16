@@ -10,6 +10,7 @@ namespace SVS.Database.Implementaciones
     {
         public bool Conectar()
         {
+            return true;
         }
     }
 }
