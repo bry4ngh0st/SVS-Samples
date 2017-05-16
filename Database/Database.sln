@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Database", "03 - Datab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVS.Database", "SVS.Database\SVS.Database.csproj", "{4ECF3228-79A0-42B8-9D80-5B6770494A62}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Unit Tests", "00 - Unit Tests", "{D8D307D9-F31F-414F-8DF6-2246FE1717B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVS.Database.UnitTests", "SVS.Database.UnitTests\SVS.Database.UnitTests.csproj", "{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +21,16 @@ Global
 		{4ECF3228-79A0-42B8-9D80-5B6770494A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ECF3228-79A0-42B8-9D80-5B6770494A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ECF3228-79A0-42B8-9D80-5B6770494A62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4ECF3228-79A0-42B8-9D80-5B6770494A62} = {46BBC7D5-2256-4172-A178-283AE64AA0ED}
+		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6} = {D8D307D9-F31F-414F-8DF6-2246FE1717B5}
 	EndGlobalSection
 EndGlobal
