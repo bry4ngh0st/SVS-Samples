@@ -42,8 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDatabase.cs" />
-    <Compile Include="Implementaciones\EdsonSqlServer.cs" />
-    <Compile Include="Implementaciones\MaxSQLServer.cs" />
+    <Compile Include="Implementaciones\SqlServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

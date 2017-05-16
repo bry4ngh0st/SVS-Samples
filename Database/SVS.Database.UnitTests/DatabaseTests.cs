@@ -14,7 +14,7 @@ namespace SVS.Database.UnitTests
         [Test]
         public void PruebaDeConeccionABaseDeDatos()
         {
-            var baseDatos = new MaxSQLServer();
+            var baseDatos = new SqlServer();
             var resultado = baseDatos.Conectar();
 
             Assert.IsTrue(resultado);
