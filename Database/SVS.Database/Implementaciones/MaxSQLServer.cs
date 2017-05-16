@@ -10,10 +10,11 @@ namespace SVS.Database.Implementaciones
         {
             try
             {
-                string ruta = ConfigurationManager.ConnectionStrings["db_prueba"].ConnectionString;
+                string ruta = ConfigurationManager.ConnectionStrings["prueba"].ConnectionString;
                 SqlConnection conexion = new SqlConnection(ruta);
-
+                conexion.Open();
                 Console.WriteLine("Conexion establecida:"+ conexion);
+                conexion.Close();
                 return true;
             }
             catch (Exception ex)
