@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="IDatabase.cs" />
     <Compile Include="Implementaciones\EdsonSqlServer.cs" />
+    <Compile Include="Implementaciones\EveSQLServer.cs" />
     <Compile Include="Implementaciones\MaxSQLServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
