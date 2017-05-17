@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SVS.Database.Implementaciones
+namespace SVS.Database.EF.CE
 {
-    class CarlosSQLServer
+    public class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
-
 }

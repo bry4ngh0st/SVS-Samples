@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Database", "03 - Database", "{46BBC7D5-2256-4172-A178-283AE64AA0ED}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Unit Tests", "00 - Unit Tests", "{D8D307D9-F31F-414F-8DF6-2246FE1717B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVS.Database.UnitTests", "SVS.Database.UnitTests\SVS.Database.UnitTests.csproj", "{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Carlos", "Carlos", "{B009A978-85B1-4426-A458-C14D96A4A33F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVS.Database.EF.CE", "SVS.Database.EF.CE\SVS.Database.EF.CE.csproj", "{EF556736-433F-410A-AC03-B6C543B315A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVS.Database.EF.CE.Entities", "SVS.Database.EF.CE.Entities\SVS.Database.EF.CE.Entities.csproj", "{9103C2BF-976A-4463-A90B-B6FC38672787}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +31,14 @@ Global
 		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF556736-433F-410A-AC03-B6C543B315A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF556736-433F-410A-AC03-B6C543B315A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF556736-433F-410A-AC03-B6C543B315A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF556736-433F-410A-AC03-B6C543B315A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9103C2BF-976A-4463-A90B-B6FC38672787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9103C2BF-976A-4463-A90B-B6FC38672787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9103C2BF-976A-4463-A90B-B6FC38672787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9103C2BF-976A-4463-A90B-B6FC38672787}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +46,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4ECF3228-79A0-42B8-9D80-5B6770494A62} = {46BBC7D5-2256-4172-A178-283AE64AA0ED}
 		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6} = {D8D307D9-F31F-414F-8DF6-2246FE1717B5}
+		{B009A978-85B1-4426-A458-C14D96A4A33F} = {46BBC7D5-2256-4172-A178-283AE64AA0ED}
+		{EF556736-433F-410A-AC03-B6C543B315A0} = {B009A978-85B1-4426-A458-C14D96A4A33F}
+		{9103C2BF-976A-4463-A90B-B6FC38672787} = {B009A978-85B1-4426-A458-C14D96A4A33F}
 	EndGlobalSection
 EndGlobal
