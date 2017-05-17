@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Database", "03 - Database", "{46BBC7D5-2256-4172-A178-283AE64AA0ED}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Unit Tests", "00 - Unit Tests", "{D8D307D9-F31F-414F-8DF6-2246FE1717B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVS.Database.UnitTests", "SVS.Database.UnitTests\SVS.Database.UnitTests.csproj", "{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M", "M", "{894F6FE0-7B98-4A05-A3A4-F5B2DD620D9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVS.Database.EF.MA", "SVS.Database.EF.MA\SVS.Database.EF.MA.csproj", "{19B69FB2-8D2D-4F82-B253-17F47D3E7844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVS.Database.EF.MA.Entities", "SVS.Database.EF.MA.Entities\SVS.Database.EF.MA.Entities.csproj", "{5664C5DC-B8D6-4FE2-A6DD-1781E2B47F38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +31,14 @@ Global
 		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B69FB2-8D2D-4F82-B253-17F47D3E7844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B69FB2-8D2D-4F82-B253-17F47D3E7844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B69FB2-8D2D-4F82-B253-17F47D3E7844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B69FB2-8D2D-4F82-B253-17F47D3E7844}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5664C5DC-B8D6-4FE2-A6DD-1781E2B47F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5664C5DC-B8D6-4FE2-A6DD-1781E2B47F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5664C5DC-B8D6-4FE2-A6DD-1781E2B47F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5664C5DC-B8D6-4FE2-A6DD-1781E2B47F38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +46,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4ECF3228-79A0-42B8-9D80-5B6770494A62} = {46BBC7D5-2256-4172-A178-283AE64AA0ED}
 		{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6} = {D8D307D9-F31F-414F-8DF6-2246FE1717B5}
+		{894F6FE0-7B98-4A05-A3A4-F5B2DD620D9C} = {46BBC7D5-2256-4172-A178-283AE64AA0ED}
+		{19B69FB2-8D2D-4F82-B253-17F47D3E7844} = {894F6FE0-7B98-4A05-A3A4-F5B2DD620D9C}
+		{5664C5DC-B8D6-4FE2-A6DD-1781E2B47F38} = {894F6FE0-7B98-4A05-A3A4-F5B2DD620D9C}
 	EndGlobalSection
 EndGlobal
