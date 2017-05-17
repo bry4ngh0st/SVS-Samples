@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SVS.Database.Implementaciones;
+using SVS.Database.EF.FD;
+using SVS.Database.EF.FD.Entities;
 
 namespace SVS.Database.UnitTests
 {
@@ -19,5 +21,23 @@ namespace SVS.Database.UnitTests
 
             Assert.IsTrue(resultado);
         }
+
+        [Test]
+        public void PruebaEntityFramework()
+        {
+            DatabaseContext dbcontext =  new DatabaseContext();
+            var post = new Post();
+            post.IdPost = 1;
+            post.comentario = "Abstraccion";
+            post.fechaRegistro = DateTime.Now;
+            post.fechaModificacion = DateTime.Now;
+            //dbcontext.ListaPost.Add(post);
+            var resultado = dbcontext.ListaPost.Add(post);
+            Assert.IsTrue(resultado !=null);
+
+
+
+        }
     }
+
 }
