@@ -1,10 +1,8 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SVS.Database.EF;
 using SVS.Database.Implementaciones;
+using SVS.Negocio.Entidades;
+using System;
 
 namespace SVS.Database.UnitTests
 {
@@ -12,12 +10,19 @@ namespace SVS.Database.UnitTests
     public class DatabaseTests
     {
         [Test]
-        public void PruebaDeConeccionABaseDeDatos()
+        public void EntityFramework()
         {
-            var baseDatos = new SqlServer();
-            var resultado = baseDatos.Conectar();
+            ContextDB contextBD = new ContextDB();
+            Post post = new Post();
 
-            Assert.IsTrue(resultado);
+            post.IdPost = 1;
+            post.Titulo = "Entrevista";
+            post.Contenido = "Comenzando a escribir algo";
+            post.FechaRegistro = DateTime.Now;
+            post.FechaModificacion = DateTime.Now;
+
+            contextBD.ListaPost.Add(post);
+            contextBD.SaveChanges();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace SVS.Database.Implementaciones
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error en la conexion a la base de datos. {ex.Message}");
+                throw new Exception($"Error en la conexion a la base de datos" + ex.Message);
             }
         }
     }
