@@ -6,14 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 using SVS.Database.Implementaciones;
 using SVS.Database.EF.FD;
-using SVS.Database.EF.FD.Entities;
+using SVS.Database.EF;
+using SVS.Negocio.Entidades;
+using MySql.Data.MySqlClient;
+
 
 namespace SVS.Database.UnitTests
 {
     [TestFixture]
     public class DatabaseTests
     {
-        [Test]
+       [Test]
         public void PruebaDeConeccionABaseDeDatos()
         {
             var baseDatos = new SqlServer();
@@ -22,7 +25,7 @@ namespace SVS.Database.UnitTests
             Assert.IsTrue(resultado);
         }
 
-        [Test]
+        /*[Test]
         public void PruebaEntityFramework()
         {
             DatabaseContext dbcontext =  new DatabaseContext();
@@ -37,6 +40,18 @@ namespace SVS.Database.UnitTests
 
 
 
+        }*/
+        [Test]
+        public void PruebaEntityFramework()
+        {
+            ContextoBD bdcontext = new ContextoBD();
+            var post = new Post();
+            post.comentario = "Abstraccion";
+            post.fechaRegistro = DateTime.Now;
+            post.fechaModificacion = DateTime.Now;
+            //dbcontext.ListaPost.Add(post);
+            var resultado = bdcontext.ListaPost.Add(post);
+            Assert.IsTrue(resultado != null);
         }
     }
 

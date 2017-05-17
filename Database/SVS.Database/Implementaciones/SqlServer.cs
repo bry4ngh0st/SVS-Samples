@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Configuration;
-
+using MySql.Data.MySqlClient;
 namespace SVS.Database.Implementaciones
 {
     public class SqlServer : IDatabase
@@ -10,8 +10,9 @@ namespace SVS.Database.Implementaciones
         {
             try
             {
-                var connectionString = ConfigurationManager.ConnectionStrings["dbprueba"].ConnectionString;
-
+                //var connectionString = ConfigurationManager.ConnectionStrings["dbprueba"].ConnectionString;
+                var connectionString = ConfigurationManager.ConnectionStrings["prueba"].ConnectionString;
+                //string conexion = ;
                 using (var sqlConnection = new SqlConnection(connectionString))
                 {
                     sqlConnection.Open();
