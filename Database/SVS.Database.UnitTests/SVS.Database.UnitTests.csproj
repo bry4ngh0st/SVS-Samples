@@ -72,13 +72,25 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SVS.Database.EF.CE.Entities\SVS.Database.EF.CE.Entities.csproj">
-      <Project>{9103C2BF-976A-4463-A90B-B6FC38672787}</Project>
-      <Name>SVS.Database.EF.CE.Entities</Name>
+    <ProjectReference Include="..\SVS.Database.EF.FD.Entities\SVS.Database.EF.FD.entities.csproj">
+      <Project>{3ed67fd1-7825-4361-bedf-9b69255fad99}</Project>
+      <Name>SVS.Database.EF.FD.entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SVS.Database.EF.CE\SVS.Database.EF.CE.csproj">
-      <Project>{EF556736-433F-410A-AC03-B6C543B315A0}</Project>
-      <Name>SVS.Database.EF.CE</Name>
+    <ProjectReference Include="..\SVS.Database.EF.FD\SVS.Database.EF.FD.csproj">
+      <Project>{04E3FCE1-E33B-4C32-9B1F-468F0E49FDFF}</Project>
+      <Name>SVS.Database.EF.FD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SVS.Database.EF\SVS.Database.EF.csproj">
+      <Project>{f47ef2e9-03d2-4e4e-abe1-c0d648135920}</Project>
+      <Name>SVS.Database.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SVS.Database\SVS.Database.csproj">
+      <Project>{4ecf3228-79a0-42b8-9d80-5b6770494a62}</Project>
+      <Name>SVS.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SVS.Negocio\SVS.Negocio.csproj">
+      <Project>{9c89567a-819b-4ec1-a0d9-08175f2abdae}</Project>
+      <Name>SVS.Negocio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
