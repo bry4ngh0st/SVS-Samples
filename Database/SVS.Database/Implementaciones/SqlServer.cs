@@ -13,7 +13,7 @@ namespace SVS.Database.Implementaciones
                 //var connectionString = ConfigurationManager.ConnectionStrings["dbprueba"].ConnectionString;
                 var connectionString = ConfigurationManager.ConnectionStrings["prueba"].ConnectionString;
                 //string conexion = ;
-                using (var sqlConnection = new SqlConnection(connectionString))
+                using (var sqlConnection = new MySqlConnection(connectionString))
                 {
                     sqlConnection.Open();
                     sqlConnection.Close();
