@@ -2,6 +2,7 @@
 using SVS.EF.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SVS.EF.Tests
 {
@@ -43,6 +44,44 @@ namespace SVS.EF.Tests
             foreach (var post in posts)
             {
                 Console.WriteLine($"{post.Id} | {post.Contenido}");
+            }
+        }
+
+        [Test]
+        public void ObtenerPostSegunId()
+        {
+            var id = 1;
+            var post = _contexto.Posts.Find(id);
+
+            Assert.IsNotNull(post);
+        }
+        
+        [Test]
+        public void ObtenerUltimoPost()
+        {
+            var posts = _contexto.Posts.ToList();
+            var lastPost = posts.Last();
+
+            Assert.IsNotNull(lastPost);
+        }
+
+        [Test]
+        public void ObtenerPrimerPost()
+        {
+            var firstPost = _contexto.Posts.First();
+
+            Assert.IsNotNull(firstPost);
+        }
+
+        [Test]
+        public void ObtenerPostsSegunPalabraClave()
+        {
+            var palabra = "entity";
+            var posts = _contexto.Posts.Where(p => p.Contenido.Contains(palabra));
+
+            foreach (var post in posts)
+            {
+                Console.WriteLine($"{post.Contenido}");
             }
         }
     }
