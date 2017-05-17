@@ -11,6 +11,6 @@ namespace SVS.Database.EF.MA
     public class DatabaseContext : DbContext
     {
         public DbSet<Post> ListaPosts { get; set; }
-        public DatabaseContext() : base("post") { }
+        public DatabaseContext() : base("dbprueba") { }
     }
 }

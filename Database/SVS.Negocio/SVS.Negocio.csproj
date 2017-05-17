@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{807EC50F-E99F-4B67-A4EF-A5EB8BFD79B6}</ProjectGuid>
+    <ProjectGuid>{30B3DC23-7C17-4B71-B466-2E3FBBADC30D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SVS.Database.UnitTests</RootNamespace>
-    <AssemblyName>SVS.Database.UnitTests</AssemblyName>
+    <RootNamespace>SVS.Negocio</RootNamespace>
+    <AssemblyName>SVS.Negocio</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,10 +46,6 @@
       <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -61,31 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseTests.cs" />
+    <Compile Include="Entidades\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SVS.Database.EF\SVS.Database.EF.csproj">
-      <Project>{8c49fcf1-3f66-4ec8-98fe-f6f3d986f3a2}</Project>
-      <Name>SVS.Database.EF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SVS.Database\SVS.Database.csproj">
-      <Project>{4ecf3228-79a0-42b8-9d80-5b6770494a62}</Project>
-      <Name>SVS.Database</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SVS.Negocio\SVS.Negocio.csproj">
-      <Project>{30b3dc23-7c17-4b71-b466-2e3fbbadc30d}</Project>
-      <Name>SVS.Negocio</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
