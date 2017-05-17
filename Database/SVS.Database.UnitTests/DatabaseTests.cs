@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SVS.Database.Implementaciones;
 
 namespace SVS.Database.UnitTests
 {
@@ -13,6 +14,10 @@ namespace SVS.Database.UnitTests
         [Test]
         public void PruebaDeConeccionABaseDeDatos()
         {
+            var baseDatos = new SqlServer();
+            var resultado = baseDatos.Conectar();
+
+            Assert.IsTrue(resultado);
         }
     }
 }

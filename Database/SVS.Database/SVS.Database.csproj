@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,9 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDatabase.cs" />
-    <Compile Include="Implementaciones\ArthurSQLServer.cs" />
-    <Compile Include="Implementaciones\EdsonSqlServer.cs" />
-    <Compile Include="Implementaciones\MaxSQLServer.cs" />
+    <Compile Include="Implementaciones\SqlServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
