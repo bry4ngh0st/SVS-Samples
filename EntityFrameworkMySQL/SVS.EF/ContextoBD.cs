@@ -11,7 +11,7 @@ namespace SVS.EF
 {
     public class ContextoBD : DbContext
     {
-        public ContextoBD() : base("test")
+        public ContextoBD() : base("prueba")
         {
         }
 
