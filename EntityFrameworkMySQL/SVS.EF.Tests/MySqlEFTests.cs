@@ -2,6 +2,7 @@
 using SVS.EF.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 
 namespace SVS.EF.Tests
@@ -12,7 +13,6 @@ namespace SVS.EF.Tests
         private static ContextoBD _contexto = new ContextoBD();
 
         [Test]
-
         public void RegistrarNuevosPostsTest()
         {
             var posts = new List<Post>()
@@ -82,6 +82,17 @@ namespace SVS.EF.Tests
             foreach (var post in posts)
             {
                 Console.WriteLine($"{post.Contenido}");
+            }
+        }
+
+        [Test]
+        public void AdoTest()
+        {
+            var connectionstring = "Server=tcp:kiru.database.windows.net,1433;Initial Catalog=BD-Kiru;Persist Security Info=False;User ID=kiru;Password=azure2017$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            using (var connection = new SqlConnection(connectionstring))
+            {
+                connection.Open();
+                connection.Close();
             }
         }
     }
