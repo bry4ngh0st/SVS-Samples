@@ -86,6 +86,63 @@ namespace SVS.EF.Tests
         }
 
         [Test]
+        public void PostsSegunFechaEspecifica()
+        {
+            var fecha = new DateTime(2017, 05, 17);
+            var posts = _contexto.Posts.ToList();
+
+            var postsFiltrados = posts.Where(p => p.FechaRegistro.Date.Equals(fecha));
+        }
+
+        [Test]
+        public void PostsConContenidoRepetido()
+        {
+            var posts = _contexto.Posts.ToList();
+
+            var resultado = posts
+                .GroupBy(p => p.Contenido)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key);
+
+            foreach (var post in resultado)
+            {
+                Console.WriteLine($"{post}");
+            }
+        }
+
+        [Test]
+        public void PostsConContenidoUnico()
+        {
+            var posts = _contexto.Posts.ToList();
+
+            var resultado = posts
+                .GroupBy(p => p.Contenido)
+                .Where(g => g.Count().Equals(1))
+                .Select(g => g.Key);
+
+            foreach (var post in resultado)
+            {
+                Console.WriteLine($"{post}");
+            }
+        }
+
+        [Test]
+        public void RankingDePostsSegunFecha()
+        {
+            var posts = _contexto.Posts.ToList();
+
+            var resultado = posts
+                .GroupBy(p => p.FechaRegistro.Date)
+                .Select(g => new { fecha = g.Key, cantidad = g.Count() })
+                .OrderBy(g => g.cantidad);
+            
+            foreach (var valor in resultado)
+            {
+                Console.WriteLine($"{valor.fecha.Date} - {valor.cantidad}");
+            }
+        }
+
+        [Test]
         public void AdoTest()
         {
             var connectionstring = "Server=tcp:kiru.database.windows.net,1433;Initial Catalog=BD-Kiru;Persist Security Info=False;User ID=kiru;Password=azure2017$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
