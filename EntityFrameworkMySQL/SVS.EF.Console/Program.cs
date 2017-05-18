@@ -1,5 +1,6 @@
 ﻿using SVS.EF.Entidades;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -60,7 +61,53 @@ namespace SVS.EF.Console
                 System.Console.WriteLine(item.Contenido);
             }
 
-            System.Console.WriteLine("=======>Lista de post con contenido " + valor);
+            var Fecha = DateTime.Today;
+
+            System.Console.WriteLine("=======>Lista de post en una fecha específica" + Fecha);
+            
+            listaPost = ListarPostEnFechaEspecifica(Fecha);
+
+            foreach (var item in listaPost)
+            {
+                System.Console.WriteLine(item.Contenido);
+            }
+
+            System.Console.WriteLine("=======>Lista de post en una fecha específica" + Fecha);
+
+            System.Console.WriteLine("=======>Lista de post modificados");
+
+            listaPost = ListarPostModificados();
+
+            foreach (var item in listaPost)
+            {
+                System.Console.WriteLine(item.Contenido);
+            }
+
+            System.Console.WriteLine("=======>Lista de post modificados");
+
+            System.Console.WriteLine("=======>Lista de post Repetidos");
+
+            var listaPostRepetidos = ObtenerPostSegunContenidoRepetido();
+
+            foreach (var item in listaPost)
+            {
+                System.Console.WriteLine(item.Contenido);
+            }
+
+            System.Console.WriteLine("=======>Lista de post Repetidos");
+
+            System.Console.WriteLine("=======>Ranking de Post");
+
+            var rankingPost = RankingPost();
+
+            System.Console.WriteLine("hasta aca");
+            foreach (var ps in rankingPost)
+            {
+                System.Console.WriteLine(ps.);
+            }
+
+            System.Console.WriteLine("=======>Ranking de Post");
+
 
             System.Console.ReadLine();
         }
@@ -84,13 +131,72 @@ namespace SVS.EF.Console
         public static List<Post> ObtenerPostSegunContenido(string valor)
         {
             
-            var posts = _contexto.Posts.Where(p=>p.Contenido.Contains(valor)).ToList();
+            var posts = _contexto.Posts.Where(p => p.Contenido.Contains(valor)).ToList();
             return posts;
         }
         public static List<Post> ObtenerPostSegunContenidoRepetido()
         {
-            var posts = _contexto.Posts.Where(p => p.Contenido.Contains("")).ToList();
-            return posts;
+            var duplicados = _contexto.Posts.GroupBy(x => x.Contenido)   
+                .Where(g => g.Count() > 1)   
+                .Select(g => g.FirstOrDefault());
+
+
+            List<Post> listaDuplicados = new List<Post>();
+
+            var grpDupes = from f in _contexto.Posts
+                           group f by f.Contenido into grps
+                           where grps.Count() > 1
+                           select grps;
+
+            foreach (var item in grpDupes)
+            {
+                foreach (var thing in item)
+                {
+                    listaDuplicados.Add(thing);
+                }
+            }
+            
+            return listaDuplicados.ToList();
+        }
+
+        public static List<Post> ObtenerPostSegunContenidoUnico()
+        {
+            var duplicados = _contexto.Posts.GroupBy(x => x.Id).
+                Select(y => y.First()).Distinct();
+
+            return duplicados.ToList();
+        }
+
+        public static ArrayList[][] RankingPost()
+        {
+            var rankingPorFechas = _contexto.Posts.
+                GroupBy(f => f.FechaRegistro).
+                Select(y => new {
+                    Fecha = y.Key,
+                    Cantidad = y.Count(),
+                });
+
+            ArrayList[][] nuevoRanking = new ArrayList[][];
+
+            foreach (var post in rankingPorFechas)
+            {
+                    nuevoRanking.Add(post);
+                System.Console.WriteLine(post.Fecha);
+                
+            }
+            return nuevoRanking;
+        }
+
+        public static List<Post> ListarPostEnFechaEspecifica(DateTime data)
+        {
+            return _contexto.Posts.Where(p => p.FechaRegistro==data).ToList();
+        }
+
+        public static List<Post> ListarPostModificados()
+        {
+            var listPosts = _contexto.Posts.Where(p => !p.FechaModificacion.Equals(p.FechaRegistro));
+            var listPosts2 = _contexto.Posts.Where(p => p.FechaModificacion != p.FechaRegistro);
+            return listPosts2.ToList();
         }
         //private static void RegistrarPosts()
         //{
