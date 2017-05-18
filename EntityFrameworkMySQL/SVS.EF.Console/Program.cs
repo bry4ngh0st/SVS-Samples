@@ -33,15 +33,75 @@ namespace SVS.EF.Console
             var post = ObtenerUltimoPost();
             System.Console.WriteLine(string.Concat(post.Id, "  ", post.Contenido));
             */
+            /*
             var posts = BuscarPorPalabraEspecifica("1");
 
             foreach (var post in posts)
             {
                 System.Console.WriteLine($"{post.Id} | {post.Contenido}");
             }
+            */
+            /*
+            var posts = RegistroNoModificado();
 
+            foreach (var post in posts)
+            {
+                System.Console.WriteLine($"{post.Id} | {post.Contenido}");
+            }
+            */
+            /*
+            var posts = ContenidoRepetido();
+
+            foreach (var post in posts)
+            {
+                System.Console.WriteLine($"{post.Id} | {post.Contenido}");
+            }
+            */
+            var posts = RankingPorFecha();
+
+            foreach (var post in posts)
+            {
+                System.Console.WriteLine($"{post.Fecha.Value.ToShortDateString()} | {post.Cantidad}");
+            }
             System.Console.ReadLine();
+
+        }
+
+        public static List<Ranking> RankingPorFecha()
+        {
+            var ListaPost = _contexto.Posts.ToList();
+
+            var resultado = ListaPost.GroupBy(p => p.FechaRegistro.Date)
+                .Select(g => new Ranking { Fecha = g.Key, Cantidad = g.Count()});
             
+            return resultado.ToList();
+        }
+
+        public static List<Post> ContenidoRepetido()
+        {
+            var resultado = _contexto.Posts.GroupBy(p => p.Contenido)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.FirstOrDefault());
+            return resultado.ToList();
+        }
+
+        public static List<Post> RegistroNoModificado()
+        {
+            var resultado = _contexto.Posts.Where(p => p.FechaModificacion == null);
+            return resultado.ToList();
+        }
+
+        public static List<Post> ModificadoPorFecha()
+        {
+            var resultado = _contexto.Posts.Where(p => p.FechaRegistro != p.FechaModificacion);
+            var resultado2 = _contexto.Posts.Where(p => !p.FechaRegistro.Equals(p.FechaModificacion));
+            return resultado.ToList();
+        }
+
+        public static List<Post> RangoFecha(DateTime FechaInicio, DateTime FechaFinal)
+        {
+            var resultado = _contexto.Posts.Where(fecha => fecha.FechaRegistro.Date>=FechaInicio && fecha.FechaRegistro.Date<= FechaFinal);
+            return resultado.ToList();
         }
 
         public static List<Post> ListarPorContenidoRepetido(string cadena)
