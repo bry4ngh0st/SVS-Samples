@@ -35,8 +35,7 @@ namespace SVS.EF.Console
             //3 consulta
             //var primer = PrimerPostRegistrado();
             //System.Console.WriteLine($"{primer.Contenido} | {primer.FechaRegistro}");
-
-
+            
             //4 consulta
             //var palabra = "del";
             //var posts = ListaPostsSegunPalabraEspecifica(palabra);
@@ -79,11 +78,11 @@ namespace SVS.EF.Console
             //}
 
             //9 consulta
-            var rankings = ListaPostsPorRanking();
-            foreach (var ranking in rankings)
-            {
-                System.Console.WriteLine($"{ranking.Fecha} | {ranking.Cantidad}");
-            }
+            //var rankings = ListaPostsPorRanking();
+            //foreach (var ranking in rankings)
+            //{
+            //    System.Console.WriteLine($"{ranking.Fecha} | {ranking.Cantidad}");
+            //}
 
             //10 consulta
             //var posts = ListaPostModificados();

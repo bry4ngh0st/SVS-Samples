@@ -9,8 +9,7 @@ namespace SVS.DP.Tests
         [Test]
         public void Main()
         {
-            var property = Singleton.GetProperty();
-            
+            var property = Singleton.GetProperty();           
 
             Assert.IsNotNull(property);
         }
