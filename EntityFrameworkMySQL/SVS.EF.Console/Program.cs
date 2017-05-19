@@ -167,7 +167,7 @@ namespace SVS.EF.Console
             return duplicados.ToList();
         }
 
-        public static ArrayList[,] RankingPost()
+        public static ArrayList[][] RankingPost()
         {
             var rankingPorFechas = _contexto.Posts.
                 GroupBy(f => f.FechaRegistro).
@@ -176,11 +176,11 @@ namespace SVS.EF.Console
                     Cantidad = y.Count(),
                 });
 
-            ArrayList[,] nuevoRanking = new ArrayList[];
+            ArrayList[][] nuevoRanking = new ArrayList[][];
 
             foreach (var post in rankingPorFechas)
             {
-                    //nuevoRanking.Add(post);
+                    nuevoRanking.Add(post);
                 System.Console.WriteLine(post.Fecha);
                 
             }

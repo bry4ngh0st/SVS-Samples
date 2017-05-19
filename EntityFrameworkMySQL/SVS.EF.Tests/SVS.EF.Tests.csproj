@@ -69,6 +69,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SVS.EF\SVS.EF.csproj">
+      <Project>{bb1d474d-3a69-4da8-b73e-dda738d07745}</Project>
+      <Name>SVS.EF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
