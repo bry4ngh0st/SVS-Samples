@@ -1,0 +1,12 @@
+﻿@model IEnumerable<SVS.EF.Entidades.Post>
+@*<p>@ViewBag.mensaje</p>*@
+<div>
+    @foreach (var item in Model)
+    {
+        <p> @item.Id </p>
+        <p> @item.Contenido </p>
+        <p> @item.FechaRegistro </p>
+        <p> @item.FechaModificacion  </p>
+    }
+</div>
+
