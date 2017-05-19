@@ -8,6 +8,5 @@ namespace SVS.EF.Negocio
 {
     public class ManagerDB
     {
-        private static ContextoBD co
     }
 }
