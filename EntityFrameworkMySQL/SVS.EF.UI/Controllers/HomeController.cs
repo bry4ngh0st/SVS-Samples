@@ -20,11 +20,10 @@ namespace SVS.EF.UI.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Post()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Lista de Post";
 
-            return View();
-        }
+            return View(        }
     }
 }
