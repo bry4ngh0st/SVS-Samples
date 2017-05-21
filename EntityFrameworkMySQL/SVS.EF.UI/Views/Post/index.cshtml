@@ -1,0 +1,14 @@
+﻿
+@Model IEnumerable<SVS.EF.Entidades.Post>
+    @{
+        ViewBag.Title = "Lista de Post";
+        
+    }
+    <div>
+        @foreach (var datosPost in Model)
+        {
+            <p>datosPost.Contenido</p>
+        }
+    </div>
+    <h2> @ViewBag.Datos</h2>
+

@@ -15,7 +15,7 @@ namespace SVS.EF.UI.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "MVc";
+            ViewBag.Message = "MVC";
 
             return View();
         }
